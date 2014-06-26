@@ -17,13 +17,18 @@ class MyApp < Sinatra::Application
     erb :item, :locals => {:items => @items}
   end
 
+  get '/item/item_new' do
+    erb :item_new, :locals => {:items => @items}
+  end
+
   get '/item/:identifier' do
     identifier = params[:identifier].to_i
     "You found: #{@items[identifier]}"
   end
 
-  get '/item/new' do
-    erb :item_new, :locals => {:items => @items}
+  post '/form' do
+    input = params[:name]
+    puts input
   end
 
   run! if app_file == $0
