@@ -27,8 +27,8 @@ class MyApp < Sinatra::Application
   end
 
   post '/form' do
-    input = params[:name]
-    puts input
+    post = params[:post]
+    "You submitted: #{post}"
   end
 
   run! if app_file == $0
