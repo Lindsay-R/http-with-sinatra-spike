@@ -1,0 +1,13 @@
+<h1>item.erb</h1>
+
+<ul>
+
+  <% items.each_with_index do |item, index| %>
+    <li><a href="/item/<%= index %>"><%= item %></a></li>
+  <% end %>
+
+
+</ul>
+
+
+<a href='/'>Back to root page</a>
